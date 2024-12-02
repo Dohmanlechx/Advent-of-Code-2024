@@ -3,7 +3,7 @@ import kotlin.math.abs
 fun main(args: Array<String>) {
     val a = mutableListOf<Int>()
     val b = mutableListOf<Int>()
-    for (line in Reader.input(1)) {
+    for (line in Reader.input("d01")) {
         a.add(line.split(" ")[0].toInt())
         b.add(line.split(" ")[1].toInt())
     }

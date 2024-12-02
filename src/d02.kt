@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
 }
 
 fun d02a() {
-    val sum = Reader.input(2).count {
+    val sum = Reader.input("d02").count {
         val line = it.split(" ").map(String::toInt)
         checkLine(line)
     }
@@ -14,7 +14,7 @@ fun d02a() {
 }
 
 fun d02b() {
-    val sum = Reader.input(2).count {
+    val sum = Reader.input("d02").count {
         val line = it.split(" ").map(String::toInt)
         (-1..<line.count()).any { i -> checkLine(line, removeAt = i) }
     }

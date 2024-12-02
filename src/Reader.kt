@@ -1,9 +1,9 @@
 object Reader {
-    fun example(day: Int, split: String = "\n") =
-        lines("/${day.padded()}/example", split)
+    fun example(path: String, split: String = "\n") =
+        lines("/$path/example", split)
 
-    fun input(day: Int, split: String = "\n") =
-        lines("/${day.padded()}/input", split)
+    fun input(path: String, split: String = "\n") =
+        lines("/$path/input", split)
 
     private fun lines(path: String, split: String) =
         this@Reader::class.java
@@ -12,9 +12,6 @@ object Reader {
             .split(split)
             .map(String::trim)
             .superTrim()
-
-    private fun Int.padded() =
-        toString().padStart(2, '0')
 
     private fun List<String>.superTrim(): List<String> {
         val trimmedList = mutableListOf<String>()

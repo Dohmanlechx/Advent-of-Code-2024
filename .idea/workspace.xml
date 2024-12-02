@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aef2db2c-f7cc-4920-ba43-dbbb8b399ed5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/d02.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/d02.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/01/example" beforeDir="false" afterPath="$PROJECT_DIR$/resources/d01/example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/01/input" beforeDir="false" afterPath="$PROJECT_DIR$/resources/d01/input" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/02/example" beforeDir="false" afterPath="$PROJECT_DIR$/resources/d02/example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/02/input" beforeDir="false" afterPath="$PROJECT_DIR$/resources/d02/input" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reader.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,18 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Dohmanlechx"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Dohmanlechx&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Dohmanlechx/Advent-of-Code-2024.git",
-    "accountId": "3f88b5c1-b7bd-495c-b1b0-31340ffcd49c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Dohmanlechx/Advent-of-Code-2024.git&quot;,
+    &quot;accountId&quot;: &quot;3f88b5c1-b7bd-495c-b1b0-31340ffcd49c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -59,7 +63,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "fileTemplates"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -86,10 +90,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="D03Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="D03Kt" />
+      <module name="Advent-of-Code-2024" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.D02Kt" />
         <item itemvalue="Kotlin.D01Kt" />
+        <item itemvalue="Kotlin.D03Kt" />
       </list>
     </recent_temporary>
   </component>

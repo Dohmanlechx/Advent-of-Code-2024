@@ -4,9 +4,9 @@ fun main(args: Array<String>) {
 }
 
 fun ${NAME}a() {
-    val lines = Reader.input(x)
+    val lines = Reader.input("${NAME}")
 }
 
 fun ${NAME}b() {
-    val lines = Reader.input(x)
+    val lines = Reader.input("${NAME}")
 }

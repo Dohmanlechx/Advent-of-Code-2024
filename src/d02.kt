@@ -42,3 +42,19 @@ private fun checkLine(line: List<Int>, removeAt: Int = -1): Boolean {
 
     return true
 }
+
+/* Alternative solution, heavily inspired by ChatGPT
+private fun checkLine(line: List<Int>, removeAt: Int = -1): Boolean {
+    val differences = line
+        .run {
+            if (removeAt !in indices) this
+            else take(removeAt) + drop(removeAt + 1)
+        }
+        .zipWithNext { a, b -> a - b }
+
+    return when {
+        differences.any { it == 0 || abs(it) > 3 } -> false
+        else -> differences.all { diff -> (diff > 0) == differences.firstOrNull()?.let { it > 0 } }
+    }
+}
+*/

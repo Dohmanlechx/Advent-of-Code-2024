@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aef2db2c-f7cc-4920-ba43-dbbb8b399ed5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/01/example" beforeDir="false" afterPath="$PROJECT_DIR$/resources/d01/example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/01/input" beforeDir="false" afterPath="$PROJECT_DIR$/resources/d01/input" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/02/example" beforeDir="false" afterPath="$PROJECT_DIR$/resources/d02/example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/02/input" beforeDir="false" afterPath="$PROJECT_DIR$/resources/d02/input" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/d03.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/d03.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,7 @@
   "keyToString": {
     "Kotlin.D01Kt.executor": "Run",
     "Kotlin.D02Kt.executor": "Run",
+    "Kotlin.D03Kt.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -75,7 +72,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.D02Kt">
+  <component name="RunManager" selected="Kotlin.D03Kt">
     <configuration name="D01Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="D01Kt" />
       <module name="Advent-of-Code-2024" />
@@ -99,9 +96,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.D03Kt" />
         <item itemvalue="Kotlin.D02Kt" />
         <item itemvalue="Kotlin.D01Kt" />
-        <item itemvalue="Kotlin.D03Kt" />
       </list>
     </recent_temporary>
   </component>

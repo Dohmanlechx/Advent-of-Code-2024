@@ -9,7 +9,8 @@ object Reader {
         this@Reader::class.java
             .getResource(path)!!
             .readText()
-            .run { if (split == null) listOf(this) else split(split).map(String::trim).superTrim() }
+            .run { if (split == null) listOf(this) else split(split).map(String::trim) }
+            .superTrim()
 
     private fun List<String>.superTrim(): List<String> {
         val trimmedList = mutableListOf<String>()

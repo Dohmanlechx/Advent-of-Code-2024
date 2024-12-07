@@ -31,23 +31,23 @@ fun main(args: Array<String>) {
     require(invalidUpdates.sum() == 6004) // Part 02
 }
 
-fun List<Int>.toSortedPages(pages: MutableMap<Int, Page>) =
+private fun List<Int>.toSortedPages(pages: MutableMap<Int, Page>) =
     map { pages[it]!! }.sorted().map(Page::num).joinToString(",")
 
-fun String.toPageNumbers(): List<Int> =
+private fun String.toPageNumbers(): List<Int> =
     split(",").map(String::toInt)
 
-fun List<String>.sum(): Int =
+private fun List<String>.sum(): Int =
     fold(0) { acc, it ->
         val pages = it.split(",").map(String::toInt)
         acc + pages[pages.count() / 2]
     }
 
-fun MutableList<Int>.addIfAbsent(e: Int) {
+private fun MutableList<Int>.addIfAbsent(e: Int) {
     if (!contains(e)) add(e)
 }
 
-data class Page(
+private data class Page(
     val num: Int,
     val bef: MutableList<Int> = mutableListOf(),
     val aft: MutableList<Int> = mutableListOf(),

@@ -17,14 +17,14 @@ fun d06b(lab: List<String>) {
 
 }
 
-data class Movement(val pos: Pair<Int, Int>, val dir: Dir)
+private data class Movement(val pos: Pair<Int, Int>, val dir: Dir)
 
-class Guard(
-    private var facing: Dir = Dir.N,
-    private var y: Int = 0,
-    private var x: Int = 0,
+private class Guard {
+    private var facing: Dir = Dir.N
+    private var y: Int = 0
+    private var x: Int = 0
     val visited: MutableSet<Movement> = mutableSetOf()
-) {
+
     fun setPosition(grid: List<String>) {
         for (y in 0..<grid.count()) {
             for (x in 0..<grid[y].count()) {

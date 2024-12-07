@@ -47,7 +47,7 @@ fun d04b(letters: List<String>, rowSize: Int, colSize: Int) {
     require(sum == 1858)
 }
 
-fun List<String>.maybeGet(x: Int, y: Int, dir: Dir, offset: Int = 1): Char? =
+private fun List<String>.maybeGet(x: Int, y: Int, dir: Dir, offset: Int = 1): Char? =
     getOrNull(x + dir.x * offset)?.getOrNull(y + dir.y * offset)
 
 enum class Dir(val x: Int, val y: Int) {

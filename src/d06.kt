@@ -1,7 +1,11 @@
+import kotlin.time.measureTime
+
 fun main(args: Array<String>) {
-    val lab = Reader.input("d06")
-    val guardPath = d06a(lab)
-    d06b(lab, guardPath)
+    measureTime {
+        val lab = Reader.input("d06")
+        val guardPath = d06a(lab)
+        d06b(lab, guardPath)
+    }.let { println("d06 completed in $it") }
 }
 
 fun d06a(lab: List<String>): List<Movement> {

@@ -38,14 +38,16 @@ fun d06b(lab: List<String>, guardPath: List<Movement>) {
     require(loops == 1933)
 }
 
-private fun List<String>.withObstacle(obstaclePos: Position): List<String> =
+private fun List<String>.withObstacle(obstaclePos: Vector2): List<String> =
     mapIndexed { y, row ->
         if (y != obstaclePos.y) row
         else row.toCharArray().apply { this[obstaclePos.x] = '#' }.concatToString()
     }
 
-data class Position(val x: Int, val y: Int)
-data class Movement(val pos: Position, val dir: Dir)
+data class Vector2(val x: Int, val y: Int) {
+    fun offset(dir: Dir) = Vector2(x + dir.x, y + dir.y)
+}
+data class Movement(val pos: Vector2, val dir: Dir)
 
 private class Guard {
     private var facing: Dir = Dir.N
@@ -58,7 +60,7 @@ private class Guard {
         for (y in 0..<grid.count()) {
             for (x in 0..<grid[y].count()) {
                 if (grid[y][x] == '^') {
-                    visited.add(Movement(Position(x, y), facing))
+                    visited.add(Movement(Vector2(x, y), facing))
                     this.y = y
                     this.x = x
                     break
@@ -69,7 +71,7 @@ private class Guard {
 
     fun turn() {
         facing = mapOf(Dir.N to Dir.E, Dir.E to Dir.S, Dir.S to Dir.W, Dir.W to Dir.N)[facing]!!
-        val movement = Movement(Position(x, y), facing)
+        val movement = Movement(Vector2(x, y), facing)
         isStuckInLoop = movement in visited
         visited.add(movement)
     }
@@ -77,7 +79,7 @@ private class Guard {
     fun advance() {
         y += facing.y
         x += facing.x
-        val movement = Movement(Position(x, y), facing)
+        val movement = Movement(Vector2(x, y), facing)
         isStuckInLoop = movement in visited
         visited.add(movement)
     }

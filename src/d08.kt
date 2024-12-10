@@ -9,11 +9,11 @@ fun main(args: Array<String>) {
 fun d08() {
     var p1Input = Reader.input("d08")
     var p2Input = Reader.input("d08")
-    val antennas = mutableMapOf<Char, MutableList<Position>>()
+    val antennas = mutableMapOf<Char, MutableList<Vector2>>()
 
     for (x in 0..<p1Input[0].count()) {
         for (y in 0..<p1Input.count()) {
-            p1Input[y][x].let { if (it != '.') antennas.getOrPut(it) { mutableListOf() }.add(Position(x, y)) }
+            p1Input[y][x].let { if (it != '.') antennas.getOrPut(it) { mutableListOf() }.add(Vector2(x, y)) }
         }
     }
 
@@ -22,7 +22,7 @@ fun d08() {
             for (j in i + 1..<positions.size) {
                 val pos1 = positions[i]
                 val pos2 = positions[j]
-                val dis = Position(pos1.x - pos2.x, pos1.y - pos2.y)
+                val dis = Vector2(pos1.x - pos2.x, pos1.y - pos2.y)
                 p1Input = p1Input
                     .placeNode(pos1.x + dis.x, pos1.y + dis.y)
                     .placeNode(pos2.x - dis.x, pos2.y - dis.y)

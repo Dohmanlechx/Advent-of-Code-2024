@@ -46,6 +46,7 @@ private fun List<String>.withObstacle(obstaclePos: Vector2): List<String> =
 
 data class Vector2(val x: Int, val y: Int) {
     fun offset(dir: Dir) = Vector2(x + dir.x, y + dir.y)
+    fun offset(v2: Vector2) = Vector2(x + v2.x, y + v2.y)
 }
 data class Movement(val pos: Vector2, val dir: Dir)
 

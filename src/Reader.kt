@@ -9,6 +9,7 @@ object Reader {
         this@Reader::class.java
             .getResource(path)!!
             .readText()
+            .replace("\r", "")
             .run { if (split == null) listOf(this) else split(split).map(String::trim) }
             .superTrim()
 

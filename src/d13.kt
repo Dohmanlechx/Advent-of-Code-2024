@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
 }
 
 fun d13a() {
-    val tokens = Reader.input("d13", split = "\n\r").fold(0) { acc, it ->
+    val tokens = Reader.input("d13", split = "\n\n").fold(0) { acc, it ->
         acc + tokensNeededToWinP1(it.split("\n"))
     }
     require(tokens == 37686)

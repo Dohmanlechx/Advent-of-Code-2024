@@ -15,14 +15,14 @@ fun main(args: Array<String>) {
 }
 
 fun d15a() {
-    val lines = Reader.input("d15", split = "\n\r")
+    val lines = Reader.input("d15", split = "\n\n")
     val moves = lines[1].map { mapOf('<' to Dir.W, '^' to Dir.N, '>' to Dir.E, 'v' to Dir.S)[it] }.filterNotNull()
     val robot = Pusher()
 
     room = lines[0].split("\n").toMutableList()
 
     for (y in room.indices) {
-        for (x in 0..<room[0].length - 1) {
+        for (x in 0..<room[0].length) {
             when (room[y][x]) {
                 WALL -> walls.add(Vector2(x, y))
                 BOX -> boxes.add(Vector2(x, y))
@@ -80,7 +80,7 @@ private fun pushBox(p: Vector2, f: Dir): Boolean {
 
 private fun printRoom(robot: Pusher) {
     for (y in room.indices) {
-        for (x in 0..<room[0].length - 1) {
+        for (x in 0..<room[0].length) {
             if (x == 0 || y == 0 || walls.any { it == Vector2(x, y) }) {
                 print(WALL)
                 continue
